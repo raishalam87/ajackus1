@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Directory</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="black-nav">
+        <div class="logo">AJACKUS</div>
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search by name or email" />
+            <select id="departmentFilter">
+                <option value="">Department</option>
+                <option value="HR">HR</option>
+                <option value="IT">IT</option>
+                <option value="Finance">Finance</option>
+            </select>
+            <select id="roleFilter">
+                <option value="">Role</option>
+                <option value="Manager">Manager</option>
+                <option value="Developer">Developer</option>
+                <option value="Analyst">Analyst</option>
+            </select>
+            <button id="addBtn">Add Employee</button>
+        </div>
+    </header>
+
+    <!-- Controls -->
+    <div class="controls">
+        <label for="sortBy">Sort:
+            <select id="sortBy">
+                <option value="firstName">First Name</option>
+                <option value="department">Department</option>
+            </select>
+        </label>
+        <label for="showCount">Show:
+            <select id="showCount">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+            </select>
+        </label>
+    </div>
+
+    <!-- Cards -->
+    <div class="card-grid" id="employeeList"></div>
+
+    <!-- Modal Form -->
+    <div class="modal" id="formModal">
+        <div class="modal-content">
+            <h2>Add Employee</h2>
+            <form id="employeeForm">
+                <input type="text" id="firstName" name="firstName" placeholder="First name" required />
+                <input type="text" id="lastName" name="lastName" placeholder="Last name" required />
+                <input type="email" id="email" name="email" placeholder="Email" required />
+                <input type="text" id="department" name="department" placeholder="Department" required />
+                <input type="text" id="role" name="role" placeholder="Role" required />
+                <div class="form-buttons">
+                    <button type="button" id="cancelBtn">Cancel</button>
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="black-nav">
+        <p style="color: white; text-align: center;">&copy; 2025 AJACKUS Employee Directory. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
